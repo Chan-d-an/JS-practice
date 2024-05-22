@@ -6,6 +6,7 @@ const years = document.getElementById("years");
 const rates = document.getElementById("rates");
 const compound = document.getElementById("compound");
 
+
 //Messge
 const message = document.getElementById("message");
 
@@ -33,8 +34,17 @@ function calculateGrowth(e) {
             data.push(toDecimal(final, 2));
             labels.push("Year " + i);
             growth = toDecimal(final, 2);
+            const tabledata = document.getElementById("body");
+            tabledata.appendChild.tr;
+            const tr = document.createElement("tr");
+            tr.appendChild.td;
+            const td = document.createElement("td");
+            td.innertext = `edd ${growth} ddgu
+        `;
+
         }
         //
+        td.innertext = `edd ${growth} ddgu`;
         message.innerText = `You will have this amount ${growth} after ${period} years`;
         drawGraph();
     } catch (error) {
@@ -62,3 +72,4 @@ function drawGraph() {
 function toDecimal(value, decimals) {
     return +value.toFixed(decimals);
 }
+
